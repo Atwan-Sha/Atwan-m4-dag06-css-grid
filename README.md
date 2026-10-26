@@ -58,7 +58,7 @@ I en kommentar för varje layout: skriv "Grid" eller "Flexbox" och varför.
 ## Tips om du fastnar
 
 - `fr` är en andel av ledigt utrymme: `1fr 2fr` ger dubbelt så bred andra kolumn.
-- Barnet ligger fel? Kolla om det har explicita `grid-column`-värden.
+- Child ligger fel? Kolla om det har explicita `grid-column`-värden.
 - Skriv ut kolumnerna på papper om du tappar bort dig.
 
 ## Inlämning
