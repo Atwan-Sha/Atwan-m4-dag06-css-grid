@@ -59,9 +59,9 @@ body {
 	line-height: var(--line-height-body);
 
 	min-height: 100vh;
-	display: flex;
+	/* display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-between; */
 	/* gap: 16px; */
 }
 
