@@ -58,7 +58,10 @@ body {
 	font-size: var(--font-size-body);
 	line-height: var(--line-height-body);
 
-	min-height: 100vh;
+  /* display: grid;
+  grid-template-rows: auto 1fr auto; */
+
+  min-height: 100vh;
 	/* display: flex;
 	flex-direction: column;
 	justify-content: space-between; */
@@ -73,6 +76,8 @@ h3 {
 	line-height: var(--line-height-heading);
 }
 
+/* *Flexbox, Motivering:
+* Ändras endast horizontellt på en linje, med eventuell wrap (eller hamburger meny) */
 header {
 	background-color: var(--color-header);
 	padding: 16px 24px;
@@ -90,7 +95,6 @@ nav ul {
 	font-weight: bold;
 	display: flex;
 	gap: 20px;
-	/* flex-direction: column; */
 }
 
 footer {
@@ -180,9 +184,8 @@ article img {
 }
 
 /* *Grid-Layout, Motivering:
-*Skalar smidigare ned när skärmbredden minskas, 
-*oavsett hur många items/kort det är i menyn, 
-*utan media-query, med bara 60% kod jämfört med flexbox!*/
+* Delar upp bild, text och knapp (väldigt olika storlekar) 
+*i tydliga kvadranter utan behov av flex-container-divs */
 #about {
   display: grid;
   grid-template-columns: 1fr 1fr;
