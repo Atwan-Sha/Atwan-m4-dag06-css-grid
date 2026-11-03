@@ -136,16 +136,10 @@ main {
 
 .menu-list {
 	max-width: 1100px;
-
-	/* display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 16px; */
-
+  margin: 16px 0;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
-	/* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+	/* grid-template-columns: 1fr 1fr 1fr 1fr; */
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 	gap: 20px;
 }
 
@@ -156,55 +150,21 @@ article {
 	height: 360px;
 	border-radius: 8px;
 	padding: 16px;
-	margin-bottom: 16px;
+	/* margin-bottom: 16px; */
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-
-	/* display: flex;
+	display: flex;
 	flex-direction: column;
-	gap: 4px;
-	flex: 1 1 calc((100% - 48px) / 4); */
+	gap: 8px;
 }
-.special {
-	/* grid-column: 1 / -1; */
-}
-
-/* article .price {
+ article .price {
 	color: var(--color-accent);
 	font-weight: bold;
 	margin-top: auto;
 }
-@media (max-width: 1100px) {
-	article {
-		height: 420px;
-		flex: 1 1 calc((100% - 16px) / 2);
-	}
-}
-@media (max-width: 600px) {
-	article {
-		height: 380px;
-		flex: 1 1 100%;
-	}
-} */
 article:hover {
 	transform: scale(1.02) rotate(1deg);
 	transition: transform 0.2s ease-in-out;
 }
-
-/* Reflektion: 
-Den svåraste egenskapen var flex-(grow, shrink, basis) för att få 
-artiklarna att växa eller krympa beroende på skärm/container-bredden.
-Jag skulle förklara den med att flex-grow är hur mycket ett element 
-kan växa i förhållande till andra element, flex-shrink är hur mycket 
-det kan krympa, och flex-basis är den initiala storleken innan det 
-växer eller krymper. */
-
-/* Steg 5:
-*justify-content: center; centrerar artiklarna horisontellt (huvudaxel) i containern.
-*justify-content: flex-end; placerar artiklarna längst till höger i containern.
-*justify-content: space-around; sprider ut artiklarna med lika mycket utrymme runt dem, 
-*inklusive mellanrum före första och efter sista artikeln. 
-*align-items: gör allt samma sak fast vertikalt (korsaxel).
-*/
 
 img {
 	max-width: 100%;
@@ -212,10 +172,24 @@ img {
 	border-radius: 4px;
 }
 
+#about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+#about h2 {
+  grid-column: 1 / -1
+}
 #about p {
 	max-width: 60ch;
 	margin-bottom: 16px;
 }
+#about img {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+
 
 .btn {
 	background-color: var(--color-accent);
